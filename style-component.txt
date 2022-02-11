@@ -1,0 +1,89 @@
+import { styled } from "@mui/material";
+import React from "react";
+
+/* export const Div = (props) => <div style={{ color: "red" }} {...props} />;
+ */
+
+export const Div = styled("div")((props) => {
+  return {
+    border: "2px solid green",
+    color: `${props.size}`,
+    fontSize: `${props.id}px`,
+    h1: {
+      color: "red",
+    },
+    a: {
+      color: "red",
+    },
+  };
+});
+
+
+export const MyBox = styled("div")((props) => {
+  return {
+    border: "2px solid green",
+    padding: "20px",
+    margin: "10px",
+    h4: {
+      color: "green",
+    },
+    img: {
+      width: "300px",
+      heigth: "300px",
+    },
+  };
+});
+/* export const Div = styled("div")({
+  color: "red",
+});
+
+// ===========material Style component =====================//
+const ButtonBox = styled.div`
+  background-color: blue;
+
+  input {
+    padding: 1rem;
+    background-color: brown;
+  }
+  button {
+    background-color: yellow;
+  }
+`;
+ */
+
+// const ButtonBox = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  border-radius: 6px;
+  overflow: hidden;
+  input {
+    padding: 1rem;
+    flex: 0 0 70%;
+    border: 2px solid #eeee;
+    border-radius: 8px 0 0 8px;
+    &:focus {
+      outline: none;
+      border: 2px solid #2F6AD9;
+    }
+  }
+  button {
+    flex: 1;
+    align-self: stretch;
+    background-color: #2F6AD9;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    input {
+      flex: 0 0 60%;
+    }
+    button {
+      font-size: 0.8rem;
+    }
+  }
+`;
